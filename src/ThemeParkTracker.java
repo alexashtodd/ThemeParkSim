@@ -9,14 +9,13 @@ public class ThemeParkTracker {
     }
 
     public void addRide(Ride ride) {
-        rides.set(rides.size(), ride);
+        rides.add(rides.size(), ride);
     }
 
     public Ride getRide(int index) {
         if (index > rides.size()) {
             return null;
         }
-
         return rides.get(index);
     }
 
@@ -43,7 +42,7 @@ public class ThemeParkTracker {
     }
 
     public void printAllRides() {
-        for (int i = 0; i < rides.size() - 1; i++) {
+        for (int i = 0; i < rides.size(); i++) {
             System.out.println(rides.get(i));
         }
     }
@@ -70,7 +69,7 @@ public class ThemeParkTracker {
 
         for (Ride ride : rides) {
 
-            if (ride.getName() == rideName) {
+            if (ride.getName().equals(rideName)) {
                 return ride.getStatus();
             } else {
                 return "Ride not found";
