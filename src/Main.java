@@ -9,8 +9,11 @@ public class Main {
         Ride ride3 = new Ride("Dragon Coaster", 60, 10, "open");
 
         tracker.addRide(ride1);
+        tracker.printRide("Thunder Mountain");
         tracker.addRide(ride2);
+        tracker.printRide("Splash Falls");
         tracker.addRide(ride3);
+        tracker.printRide("Dragon Coaster");
 
         System.out.println("All Rides:");
         tracker.printAllRides();
