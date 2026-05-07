@@ -20,8 +20,9 @@ public class ThemeParkTracker {
     }
 
     public void removeClosedRides() {
-        for (int i = 0; i < rides.size(); i++) {
-            if (rides.get(i).getStatus() == "closed") {
+        // Iterate backwards so indices don't shift as you remove items
+        for (int i = rides.size() - 1; i >= 0; i--) {
+            if (rides.get(i).getStatus().equals("closed")) {
                 rides.remove(i);
             }
         }
